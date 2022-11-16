@@ -9,7 +9,7 @@ import transactions from '../data/transactions'
 
 const App = () => {
   return (
-    <div>
+    <>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -29,7 +29,7 @@ const App = () => {
       <TransactionHistory 
         items={transactions}
       />
-    </div>
+    </>
   )
 };
 export default App;
