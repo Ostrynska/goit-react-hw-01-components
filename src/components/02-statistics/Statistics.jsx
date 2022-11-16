@@ -2,15 +2,15 @@ import PropTypes from 'prop-types';
 
 export default function Statistics({ title, stats }) {
   return (
-    <section class="statistics">
-      {title && <h2 class="title">{title}</h2>}
+    <section className="statistics">
+      {title && <h2 className="title">{title}</h2>}
 
-      <ul class="stat-list">
+      <ul className="stat-list">
         {stats.map(({ id, label, percentage }) => {
           return (
-            <li key={id} class="item">
-              <span class="label">{label}</span>
-              <span class="percentage">{percentage}%</span>
+            <li key={id} className="item">
+              <span className="label">{label}</span>
+              <span className="percentage">{percentage}%</span>
             </li>
           );
         })}
