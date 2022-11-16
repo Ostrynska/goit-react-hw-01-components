@@ -1,27 +1,22 @@
+import Friend from './Friend';
 import PropTypes from 'prop-types';
-import defaultUserImage from '../../images/user.png';
 
-export default function FriendList({friends}) {
+export default function FriendList({ friends }) {
     return (
         <ul class="friend-list">
-            {friends.map(({id, avatar = defaultUserImage, name, status}) => { 
-                return (
-                <li class="item" key={id}>
-                    <span class="status">{status}</span>
-                    <img class="avatar" src={avatar} alt="User avatar" width="48" />
-                    <p class="name">{name}</p>
-                </li>
-            )})
-        }
+            {friends.map(friend => (
+                <Friend
+                    key={friend.id}
+                    avatar={friend.avatar}
+                    name={friend.name}
+                    isOnline={friend.isOnline}
+                />))}
         </ul>
 )};
 
 FriendList.propTypes = {
     friends: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number,
-        avatar: PropTypes.string,
-        name: PropTypes.string,
-        status: PropTypes.bool,
+        id: PropTypes.number.isRequired,
     })
-    )
+    ).isRequired
 }
