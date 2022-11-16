@@ -13,7 +13,7 @@ export default function Profile({
   return (
     <div class="profile">
       <div class="description">
-        <img src={avatar} alt="User avatar" width="150" class="avatar" />
+        <img src={avatar} alt="User avatar" width="100" class="avatar" />
         <p class="name">{username}</p>
         <p class="tag">@{tag}</p>
         <p class="location">{location}</p>
@@ -34,15 +34,15 @@ export default function Profile({
         </li>
       </ul>
     </div>
-  );
-}
+  )
+};
 
 Profile.propTypes = {
-  username: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-  avatar: PropTypes.string,
-  followers: PropTypes.number,
-  views: PropTypes.number,
-  likes: PropTypes.number,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  followers: PropTypes.number.isRequired,
+  views: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired,
 };
