@@ -7,8 +7,7 @@ import friends from '../data/friends'
 import TransactionHistory from './TransactionHistory'
 import transactions from '../data/transactions'
 
-const App = () =>
-{
+const App = () => {
   return (
     <div>
       <Profile
@@ -31,6 +30,7 @@ const App = () =>
         items={transactions}
       />
     </div>
-  );
+  )
 };
+
 export default App;
