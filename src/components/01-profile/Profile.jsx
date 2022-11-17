@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import css from './Profile.module.css'
 import defaultUserImage from '../../images/user.png';
+import { ProfileCard, Description, Avatar, Name, Tag, Location, Stats, StatsItem, Label, Quantity } from './Profile.styled'
 
-export default function Profile({
+export const Profile = ({
   username,
   tag,
   location,
@@ -10,31 +10,31 @@ export default function Profile({
   followers,
   views,
   likes,
-}) {
+}) => {
   return (
-    <div className="profile">
-      <div className={css.description}>
-        <img src={avatar} alt="User avatar" width="100" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
-      </div>
+    <ProfileCard>
+      <Description>
+        <Avatar src={avatar} alt="User avatar" width="100" />
+        <Name>{username}</Name>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>3
-          <span className="quantity">{followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
-        </li>
-      </ul>
-    </div>
+      <Stats>
+        <StatsItem>
+          <Label>Followers</Label>
+          <Quantity>{followers}</Quantity>
+        </StatsItem>
+        <StatsItem>
+          <Label>Views</Label>
+          <Quantity>{views}</Quantity>
+        </StatsItem>
+        <StatsItem>
+          <Label>Likes</Label>
+          <Quantity>{likes}</Quantity>
+        </StatsItem>
+      </Stats>
+    </ProfileCard>
   )
 };
 
