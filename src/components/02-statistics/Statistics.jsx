@@ -19,6 +19,12 @@ export default function Statistics({ title, stats }) {
   )
 };
 
+
+function getRandomHexColor() {
+  const colors = ['#DC7633 ', '#5DADE2', '#EC7063','#52BE80 ', '#C39BD3' ];
+  return  colors[Math.floor(Math.random() * colors.length)];
+}
+
 Statistics.propTypes = {
     title: PropTypes.string.isRequired,
     stats: PropTypes.arrayOf(PropTypes.shape({
