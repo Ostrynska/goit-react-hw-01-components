@@ -7,6 +7,7 @@ import friends from '../data/friends'
 import TransactionHistory from './04-transactionHistory/TransactionHistory'
 import transactions from '../data/transactions'
 
+
 export const App = () => {
   return (
     <>
