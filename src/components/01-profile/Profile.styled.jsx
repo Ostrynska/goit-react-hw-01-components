@@ -48,14 +48,14 @@ export const Stats = styled.div`
     grid-column-gap: 5px;
     font-size: ${p => p.theme.fontSizes.s};
     background-color: ${p => p.theme.colors.accent};
-    borders: ${p => p.theme.borders.normal};
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 `
 
 export const StatsItem = styled.li`
    padding-top: ${p => p.theme.space[4]}px;
    padding-bottom: ${p => p.theme.space[4]}px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+
 `
 
 // export const Item = styled.li: not(: first - child)`
