@@ -1,29 +1,34 @@
 import PropTypes from 'prop-types';
+import { StatisticSection, StatisticTitle, StatisticList, StatisticItem, StatisticLabel, StatisticPercentage } from "./Statistics.styled";
 
-export default function Statistics({ title, stats }) {
+export const  Statistics = ({ title, stats }) => {
   return (
-    <section className="statistics">
-      {title && <h2 className="title">{title}</h2>}
+    <StatisticSection>
+      {title && <StatisticTitle>{title}</StatisticTitle>}
 
-      <ul className="stat-list">
+      <StatisticList>
         {stats.map(({ id, label, percentage }) => {
           return (
-            <li key={id} className="item">
-              <span className="label">{label}</span>
-              <span className="percentage">{percentage}%</span>
-            </li>
+            <StatisticItem key={id} style={{ backgroundColor: changeHex() }}>
+              <StatisticLabel as='p'>{label}</StatisticLabel>
+              <StatisticPercentage as='p'>{percentage}%</StatisticPercentage>
+            </StatisticItem>
           );
         })}
-      </ul>
-    </section>
+      </StatisticList>
+    </StatisticSection>
   )
 };
 
 
-function getRandomHexColor() {
-  const colors = ['#DC7633 ', '#5DADE2', '#EC7063','#52BE80 ', '#C39BD3' ];
-  return  colors[Math.floor(Math.random() * colors.length)];
+
+function changeHex()
+{
+  const hex = ['#F3B848', '#bd8811','#ffea79 ', '#ffcdd2', '#ff94c2', '#f06292', '#76435e', '#9c81f2', '#D85841'];
+  return hex[Math.floor(Math.random() * hex.length)]
 }
+
+
 
 Statistics.propTypes = {
     title: PropTypes.string.isRequired,
