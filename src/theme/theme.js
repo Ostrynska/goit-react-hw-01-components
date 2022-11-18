@@ -7,7 +7,8 @@ export const theme = {
   primary: '#FFF7E8',
   secondary: '#D85841',
   accent: '#F3B848',
-  muted: '#f6f6f6',
+  muted: '#ECF0F1',
+  hover: '#BDC3C7',
  },
  space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
  fonts: {
@@ -46,15 +47,17 @@ export const theme = {
    '0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.06);',
  },
  sizes: {
+  xs: '20px',
   s: '280px',
   m: '440px',
-  ml: '540px',
-  xl: '640px',
+  l: '540px',
+  xl: '740px',
  },
  transition: 'transform 0.15s ease-in-out',
  display: {
   block: 'block',
   flex: 'flex',
   grid: 'grid',
+  inlineFlex: 'inline-flex',
  },
 };
