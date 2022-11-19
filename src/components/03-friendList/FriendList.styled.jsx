@@ -6,7 +6,7 @@ export const Friends = styled.ul`
     width: ${p => p.theme.sizes.s};
 `
 
-export const Friend = styled.li`
+export const FriendListItem = styled.li`
     margin-bottom: 5px;
     display: ${p => p.theme.display.inlineFlex};
     align-items: center;
@@ -23,6 +23,7 @@ export const Friend = styled.li`
     :focus {
     background-color: ${p => p.theme.colors.accent};
     color:  ${p => p.theme.colors.white};
+    font-weight: ${p => p.theme.fontWeights.bold};
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out 0s;
 `
