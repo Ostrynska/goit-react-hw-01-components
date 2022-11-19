@@ -20,15 +20,11 @@ export const  Statistics = ({ title, stats }) => {
   )
 };
 
-
-
 function changeHex()
 {
   const hex = ['#F3B848', '#bd8811','#ffea79 ', '#ffcdd2', '#ff94c2', '#f06292', '#76435e', '#9c81f2', '#D85841'];
   return hex[Math.floor(Math.random() * hex.length)]
 }
-
-
 
 Statistics.propTypes = {
     title: PropTypes.string.isRequired,
