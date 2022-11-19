@@ -51,7 +51,7 @@ export const theme = {
   s: '280px',
   m: '440px',
   l: '540px',
-  xl: '740px',
+  xl: '640px',
  },
  transition: 'transform 0.15s ease-in-out',
  display: {
