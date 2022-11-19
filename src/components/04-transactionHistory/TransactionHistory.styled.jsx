@@ -9,23 +9,20 @@ export const Table = styled.table`
     transition: ${p => p.theme.transition};
     background-color: ${p => p.theme.colors.primary}
 `
-
 export const Thead = styled.thead`
-    height: 40px;
+    height: 55px;
     background: ${p => p.theme.colors.secondary};
-    border-radius: ${p => p.theme.radii.round};
     text-transform: uppercase;
-
 `
-
 export const TheadRow = styled.tr`
-    width: ${p => p.theme.sizes.m};
+    color: ${p => p.theme.colors.primary}
 `
-
 export const Tbody = styled.tbody`
-
 `
 export const TbodyRow = styled.tr`
+    height: 40px;
+    text-transform: capitalize;
+    text-align: center;
     transition: ${p => p.theme.transition};
     :nth-child(even) {
     background: ${p => p.theme.colors.muted};
@@ -33,6 +30,8 @@ export const TbodyRow = styled.tr`
     :hover,
     :focus {
     background: ${p => p.theme.colors.accent};
+    color:  ${p => p.theme.colors.white};
+    font-weight: ${p => p.theme.fontWeights.bold};
     transform: scale(1.03);
     transition: transform 0.3s ease-in-out 0s;
 }
@@ -40,5 +39,4 @@ export const TbodyRow = styled.tr`
 export const TheadItem = styled.th`
 `
 export const TbodyItem = styled.td`
-    padding-left: 10px;
 `
