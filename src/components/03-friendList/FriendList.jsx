@@ -7,7 +7,7 @@ import {
  FriendName,
 } from './FriendList.styled';
 
-export const FriendList = ({ friends }) => {
+const FriendList = ({ friends }) => {
  return (
   <Friends>
    {friends.map(({ id, avatar, name, isOnline }) => {
@@ -22,6 +22,8 @@ export const FriendList = ({ friends }) => {
   </Friends>
  );
 };
+
+export default FriendList;
 
 FriendList.propTypes = {
  friends: PropTypes.arrayOf(

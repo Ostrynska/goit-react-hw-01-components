@@ -9,7 +9,7 @@ import {
  TbodyItem,
 } from './TransactionHistory.styled';
 
-export const TransactionHistory = ({ items }) => {
+const TransactionHistory = ({ items }) => {
  return (
   <Table>
    <Thead>
@@ -34,6 +34,8 @@ export const TransactionHistory = ({ items }) => {
   </Table>
  );
 };
+
+export default TransactionHistory;
 
 TransactionHistory.propTypes = {
  items: PropTypes.arrayOf(

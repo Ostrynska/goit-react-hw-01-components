@@ -1,15 +1,15 @@
-import { Box } from './Box';
-import { Profile } from './01-profile';
-import { Statistics } from './02-statistics';
-import { FriendList } from './03-friendList';
-import { TransactionHistory } from './04-transactionHistory';
+import Box from './Box';
+import Profile from './01-profile';
+import Statistics from './02-statistics';
+import FriendList from './03-friendList';
+import TransactionHistory from './04-transactionHistory';
 
 import user from '../data/user';
 import data from '../data/data';
 import friends from '../data/friends';
 import transactions from '../data/transactions';
 
-export const App = () => {
+const App = () => {
  return (
   <Box
    bg="background"
@@ -34,3 +34,5 @@ export const App = () => {
   </Box>
  );
 };
+
+export default App;
